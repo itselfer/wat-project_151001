@@ -1,0 +1,26 @@
+<!-- 카테고리 페이지 -->
+
+<body ng-app="App_wat" ng-view>
+	<!-- <div ng-controller="ctr_pageType"> -->
+		<!-- .js에서 불러온 html DOM tree를 새로운 태그(directive)로 생성 및 적용. -->
+		<!-- <bind-category></bind-category> -->
+	<div ng-controller="layout_header" ng-model="txt_header">
+		<div-header></div-header>
+	</div>
+
+	<!-- <bind-category></bind-category><br /> -->
+
+	<div ng-controller="ctl_category">
+		<!-- <p>selected: {{selected.url}}</p> -->
+		<ul class="cls_tagName_ul">
+			<li class="cls_li" ng-repeat="tagName in list">
+				<button ng-click="select(tagName)">{{tagName.name}}</button>
+			</li>
+		</ul>
+	</div>
+	
+	<div ng-controller="layout_footer" ng-model="txt_footer">		
+		<div-footer></div-footer>
+	</div>
+	<!-- </div> -->
+</body>

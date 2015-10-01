@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Who is a good Teacher?</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+	<script type="text/javascript" src="./js/jquery_1_11_3_min.js"></script>
+
+	<script type="text/javascript" src="./js/angularjs_1_3_2_min.js"></script>
+	<script type="text/javascript" src="./js/angularjs_ROUTE_min.js"></script>
+
+    <script type="text/javascript" src="./js/ng-header.js"></script>
+    <script type="text/javascript" src="./js/ng-footer.js"></script>
+    <script type="text/javascript" src="./js/ng-section.js"></script>
+    <script type="text/javascript" src="./js/event.js"></script>
+    <script type="text/javascript" src="./js/ng-category.js"></script>
+
+    <script type="text/javascript" src="./app.js"></script>
+</head>
+<body ng-app="App_wat" ng-view>
+	<div ng-controller="layout_header" ng-model="txt_header">
+		<div-header></div-header>
+	</div>
+	<!-- .js에서 불러온 html DOM tree를 새로운 태그(directive)로 생성 및 적용 - header, footer. -->
+	<div ng-controller="layout_section" ng-model="div_section">
+		<div class="cls_section" layout-section>
+			<div class="wrapper_main">
+				<div class="div_learn">
+					<a href="#/page_category/page_learn" id="btn_learn" class="btn_learn">learn.icon</a>
+				</div>
+				<br />
+				<div class="div_teach">
+					<a href="#/page_category/page_teach" id="btn_teach" class="btn_teach">teach.icon</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-controller="layout_footer" ng-model="txt_footer">		
+		<div-footer></div-footer>
+	</div>
+</body>
+</html>
